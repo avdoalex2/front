@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-main: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --text-primary: #1d1d1f;
+  --text-muted: #86868b;
+  --apple-green: #008060;
+  /* 🟢 Το αυθεντικό, ζωντανό Apple πράσινο της εικόνας */
+  --green-light: #f0fdf4;
+  --border-light: #e5e7eb;
+
+  --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+
+  --shadow-subtle: 0 4px 14px rgba(0, 0, 0, 0.03);
+  --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: var(--font-apple);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+
+  /* 🟢 AMBIENT EDGE GLOW: Αναπαραγωγή του πράσινου φωτισμού στις άκρες ακριβώς όπως η φωτογραφία */
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(circle at top left, rgba(0, 128, 96, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at top right, rgba(0, 128, 96, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at bottom left, rgba(0, 128, 96, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at bottom right, rgba(0, 128, 96, 0.14) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+
+/* 🔎 ZOOMED UI ELEMENTS */
+.chat-container-zoomed {
+  max-width: 820px;
+  /* Πιο πλατύ και επιβλητικό Chat area */
+  width: 100%;
+  padding: 0 24px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d1d6;
+  border-radius: 99px;
+}
+
+.smooth-motion-node {
+  animation: fadeUp 0.5s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
